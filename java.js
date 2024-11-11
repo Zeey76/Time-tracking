@@ -23,7 +23,7 @@ function toKebabCase(str) {
 
 async function cardContent(period) {
     let cards = document.querySelector('.cards');
-    
+
     const data = await fetchData();
     cards.innerHTML = '';
     
@@ -37,7 +37,7 @@ async function cardContent(period) {
             <img src="./images/icon-ellipsis.svg">
           </div>
           <div class="activity-content">
-            <p class="hours">${item.timeframes[period].current}</p>
+            <p class="hours">${item.timeframes[period].current}hrs</p>
             <p class="previous">${period === 'daily' ? 'Yesterday' : period === 'weekly' ? 'Last Week' : 'Last Month'} - ${item.timeframes[period].previous}hrs</p>
           </div>
       </div>
