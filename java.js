@@ -26,8 +26,6 @@ async function cardContent(period) {
 
     const data = await fetchData();
     cards.innerHTML = '';
-    
-    
     data.forEach(item => {
       const titleClass = item.title === "Self Care" ? toKebabCase(item.title) : item.title.toLowerCase();
         cards.innerHTML += `<div class="activity-card ${titleClass}">
