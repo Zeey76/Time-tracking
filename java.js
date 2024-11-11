@@ -23,9 +23,10 @@ function toKebabCase(str) {
 
 async function cardContent(period) {
     let cards = document.querySelector('.cards');
-
-    cards.innerHTML = '';
+    
     const data = await fetchData();
+    cards.innerHTML = '';
+    
     
     data.forEach(item => {
       const titleClass = item.title === "Self Care" ? toKebabCase(item.title) : item.title.toLowerCase();
@@ -33,7 +34,7 @@ async function cardContent(period) {
         <div class="activity-card-info">
           <div class="activity-title">
             <h3>${item.title}</h3>
-            <img src="./images/icon-ellipsis.svg" class="ellipsis">
+            <img src="./images/icon-ellipsis.svg">
           </div>
           <div class="activity-content">
             <p class="hours">${item.timeframes[period].current}</p>
