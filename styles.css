@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    font-family: 'Rubik';
+}
+
+h2 {
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 2rem;
+    font-weight: 300;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 80rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(235, 46%, 20%);
+    
+    border-radius: 0.8rem;
+}
+
+.dashboard-part-1 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    background-color: hsl(246, 80%, 60%);
+}
+
+.dashboard-part-1 img {
+    height: 75px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.dashboard-part-2 {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    height: unset;
+}
+
+button {
+    border: none;
+    color: hsl(236, 100%, 87%);
+    padding: 0.5rem 0;
+    background-color: hsl(235, 46%, 20%);
+    cursor: pointer;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+.work {
+    background: hsl(15, 100%, 70%);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -0.3rem;
+    background-size: 4rem;
+}
+
+.play {
+    background: hsl(195, 74%, 62%);
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -0.3rem;
+    background-size: 4rem;
+}
+
+.study {
+    background: hsl(348, 100%, 68%);
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -0.3rem;
+    background-size: 4rem;
+}
+
+.exercise {
+    background: hsl(145, 58%, 55%);
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -0.3rem;
+    background-size: 4rem;
+}
+
+.social {
+    background: hsl(264, 64%, 52%);
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -0.3rem;
+    background-size: 4rem;
+}
+
+.self-care {
+    background: hsl(43, 84%, 65%);
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -0.3rem;
+    background-size: 4rem;
+}
+
+.activity-card {
+    border-radius: 0.8rem;
+}
+
+.activity-card:hover {
+    background-color: hsl(236, 100%, 87%);
+    opacity: 0.7;
+}
+
+.activity-card-info {
+    border-radius: 0.8rem;
+    background-color: hsl(235, 46%, 20%);
+    margin-top: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.activity-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hours {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.previous {
+    font-size: 0.85rem;
+}
+
+.active {
+    color: hsl(235, 45%, 61%);
+}
+
+
+@media (min-width: 50rem) {
+    .header {
+        width: 15rem;
+        height: 100%;
+        max-height: 30rem;
+    }
+    .dashboard {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .activity-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .dashboard-part-1 {
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: flex-start;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard-part-2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
